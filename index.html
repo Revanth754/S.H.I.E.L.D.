@@ -3,157 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title> 
+    <title>S.H.I.E.L.D.</title>
+
     <style>
+        /* ---------- GLOBAL STYLES ---------- */
         body {
-            margin: 20px;
+            margin: 0;
+            padding: 20px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('media/880864.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        h1, h2 {
             text-align: center;
         }
-        .square{
-            float: left;
-            margin-left: 2px;
-        }
-        pre{
-            text-align: justify;
-            font-size: 5px;
-        }
-        .column {
-  float: left;
-  width: 14%;
-  padding: 5px;
-}
 
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+        /* ---------- MAIN CONTENT ---------- */
+        .content-block {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            text-align: left;
+            background: rgba(0, 0, 0, 0.55);
+            border-radius: 12px;
+        }
 
+        /* Responsive image (Nick Fury) */
+        .nick-image {
+            width: 100%;
+            max-width: 300px;
+            float: right;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        /* ---------- FOOTER AVENGERS ICONS ---------- */
+        .avengers-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .avengers-grid img {
+            width: 70px;
+            transition: transform 0.2s;
+        }
+
+        .avengers-grid img:hover {
+            transform: scale(1.15);
+        }
+
+        /* ---------- MARQUEE STYLE ---------- */
+        .notice {
+            color: red;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* ---------- MOBILE RESPONSIVE FIXES ---------- */
+        @media (max-width: 768px) {
+            .nick-image {
+                float: none;
+                display: block;
+                margin: 0 auto 20px auto;
+                width: 80%;
+            }
+
+            .content-block {
+                padding: 15px;
+            }
+
+            .notice {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
-<body style="height: 100vh; width: 100vw;">
+
+<body>
+
+    <!-- HEADER -->
     <header>
-    <style>
-        body {
-          background-image: url('media/880864.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: 100% 100%;
-        }
-        </style>
-    <br>
-    <b><h1 style="color:white; font-size:xxx-large; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;"align="center">S.H.E.I.L.D.</S></h1></header></b></header>
-    <main>
-    <br>
-    <hr>
-    <br>
-    <marquee>
-        <i><h2 style="color: red; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ">Avoid using your fellow avenger's ID to login to prevent the leak of confidential messages</h2></i>
-    </marquee>
-    <span><pre style="color:greenyellow; font-size: x-large;">"The principle S.H.I.E.L.D. was founded upon was pure."
-"Protection."
-"Protection. One word. Sometimes, to protect one man against himself.
- Other times, to protect the planet against an alien invasion from another universe. 
- It's a broad job description."
-        ―Nick Fury and Melinda May[src]</pre></span>
-    <br>
-    <div class="square"><img src="media/nickfury.jpg" alt="nick fury" height="300" align="right">
-    </div>
-    <br>
-    <span><pre style="color:greenyellow ; font-size: x-large;">The Strategic Homeland Intervention, Enforcement and Logistics Division, 
-better known by its acronym S.H.I.E.L.D., is an American extra-governmental 
-counter-terrorism and intelligence agency tasked with maintaining both national and 
-global security.
-Founded in the wake of the Allied victory over the Axis powers and HYDRA in World War II, 
-S.H.I.E.L.D. was organized to protect the United States from all possible threats. 
-With its advanced weapons and extraordinary agents, S.H.I.E.L.D. was maybe the greatest 
-military power on Earth. 
-Following his encounter with Captain Marvel, S.H.I.E.L.D. was run by Nick Fury and 
-the World Security Council in the modern age; S.H.I.E.L.D. 
-had to deal with the significant rise in enhanced individuals, dangerous advanced 
-technology, and alien contact. But all the problems S.H.I.E.L.D. had to solve 
-eventually led to the formation of the Avengers, a response team that was recruited to 
-save the world during the alien invasion of Earth in 2012. The agency became publicly 
+        <h1 style="font-size: 3rem;">S.H.I.E.L.D.</h1>
+    </header>
+
+    <hr><br>
+
+    <!-- ALERT MESSAGE -->
+    <marquee><h2 class="notice">
+        Avoid using your fellow Avenger's ID to login to prevent the leak of confidential messages
+    </h2></marquee>
+
+    <!-- MAIN CONTENT -->
+    <div class="content-block">
+
+        <img src="media/nickfury.jpg" class="nick-image" alt="Nick Fury">
+
+        <p style="color:greenyellow; font-size:1.1rem;">
+            "The principle S.H.I.E.L.D. was founded upon was pure.  
+            Protection. One word. Sometimes, to protect one man against himself. Other times, 
+            to protect the planet against an alien invasion..."
+        </p>
+
+        <p style="color:greenyellow; font-size:1.1rem;">
+            The Strategic Homeland Intervention, Enforcement and Logistics Division, better known
+            by its acronym S.H.I.E.L.D., is an American extra-governmental counter-terrorism and
+            intelligence agency tasked with maintaining global security...
+        </p>
+
+        <p style="color:greenyellow; font-size:1.1rem;">
+            <!-- Your long text continues here — shortened for readability -->
+            Founded in the wake of the Allied victory over the Axis powers and HYDRA in World War II,
+S.H.I.E.L.D. was organized to protect the United States from all possible threats.
+With its advanced weapons and extraordinary agents, S.H.I.E.L.D. was maybe the greatest
+military power on Earth.
+Following his encounter with Captain Marvel, S.H.I.E.L.D. was run by Nick Fury and
+the World Security Council in the modern age; S.H.I.E.L.D.
+had to deal with the significant rise in enhanced individuals, dangerous advanced
+technology, and alien contact. But all the problems S.H.I.E.L.D. had to solve
+eventually led to the formation of the Avengers, a response team that was recruited to
+save the world during the alien invasion of Earth in 2012. The agency became publicly
 known after the Battle of New York, partially because of the Rising Tide website.
-In 2014, through the actions of Black Widow and Nick Fury, the world became aware 
+In 2014, through the actions of Black Widow and Nick Fury, the world became aware
 of the fact that S.H.I.E.L.D. was infiltrated and largely controlled by HYDRA.
-<br> 
-After the battle in which S.H.I.E.L.D.'s primary headquarters, the Triskelion, was 
-heavily damaged, all of S.H.I.E.L.D.'s classified files were dumped on the Internet, 
-and the agency was disavowed by the United States government and labeled a 
-terrorist organization. Many S.H.I.E.L.D. officials were taken into custody and subjected 
-to rigorous questioning. However, despite the massive manhunt on S.H.I.E.L.D.'s agents, 
-a few operatives scattered across the world in most secret bases remained loyal to their 
-oath, saving the most necessary technology for future use. But the team most 
-responsible for the survival of S.H.I.E.L.D. was the team of Agent Phil Coulson, who 
+<br>
+After the battle in which S.H.I.E.L.D.'s primary headquarters, the Triskelion, was
+heavily damaged, all of S.H.I.E.L.D.'s classified files were dumped on the Internet,
+and the agency was disavowed by the United States government and labeled a
+terrorist organization. Many S.H.I.E.L.D. officials were taken into custody and subjected
+to rigorous questioning. However, despite the massive manhunt on S.H.I.E.L.D.'s agents,
+a few operatives scattered across the world in most secret bases remained loyal to their
+oath, saving the most necessary technology for future use. But the team most
+responsible for the survival of S.H.I.E.L.D. was the team of Agent Phil Coulson, who
 valiantly led his teammates against the forces of HYDRA led by the traitors John Garrett
-and Grant Ward, winning the battle in which Garrett's plan ultimately failed. After that 
+and Grant Ward, winning the battle in which Garrett's plan ultimately failed. After that
 battle, Fury appointed Phil Coulson the new director of S.H.I.E.L.D. and tasked him
 with rebuilding the agency from scratch, becoming a shadow parapolicial agency.
 
 Now working from the shadows and hunted by almost every army in the world, Coulson used
-his oldteam as the core of S.H.I.E.L.D. 
+his oldteam as the core of S.H.I.E.L.D.
 and recruited mercenaries, former agents, and others to help
-fill the organization's ranks while simultaneously continuing the fight against HYDRA. 
+fill the organization's ranks while simultaneously continuing the fight against HYDRA.
 At the same time, another faction of S.H.I.E.L.D. arose, this one led by Robert Gonzales,
 who refused to accept Coulson's authority, believing his faction to be the only
 "real S.H.I.E.L.D." After the Battle for the Kree City, Gonzales' faction revealed its
 existence, attacking and capturing Coulson's base, the Playground. This ignited an open
-conflict between the two S.H.I.E.L.D. factions. However, after successfully 
+conflict between the two S.H.I.E.L.D. factions. However, after successfully
 working together to attack and destroy the Arctic HYDRA Research Facility, Coulson
-successfully proposed a merger of the two factions which occurred in mid-2015. 
+successfully proposed a merger of the two factions which occurred in mid-2015.
 But the peace did not last long, as the Inhumans, a super-powered humanoid race led by
 Jiaying, declared war on S.H.I.E.L.D. The fight was short, and S.H.I.E.L.D. was able
 to prevent any further damage. After the war, Coulson started a new program of recruiting
 and training Inhumans for a team to deal with various threats.
 
-The Inhuman Outbreak soon followed, and S.H.I.E.L.D. had to stand against the 
-implications it caused. Following the exposure and the abrupt end of HYDRA's 
-infiltration of the ATCU, S.H.I.E.L.D. was semi-legalized as the black ops division 
-of Matthew Ellis' administration, with the ATCU serving as S.H.I.E.L.D.'s public face. 
-With HYDRA suffering a crippling blow, S.H.I.E.L.D. became aware of the dark Inhuman, 
-Hive, and soon had to fight against his Inhuman army, which intended to transform 
-all humanity into Inhumans. As the war with Hive reached its end, Lincoln 
+The Inhuman Outbreak soon followed, and S.H.I.E.L.D. had to stand against the
+implications it caused. Following the exposure and the abrupt end of HYDRA's
+infiltration of the ATCU, S.H.I.E.L.D. was semi-legalized as the black ops division
+of Matthew Ellis' administration, with the ATCU serving as S.H.I.E.L.D.'s public face.
+With HYDRA suffering a crippling blow, S.H.I.E.L.D. became aware of the dark Inhuman,
+Hive, and soon had to fight against his Inhuman army, which intended to transform
+all humanity into Inhumans. As the war with Hive reached its end, Lincoln
 Campbell sacrificed his life to destroy Hive in a nuclear explosion in space.
-</pre></span>
+        </p>
 
-<br>
-</main>
-<footer>
-    <br>
-    <br>
-    <br>
-    <br>
-    <hr>
-    <h1 style="color: crimson; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: xxx-large;">The AVENGERS Initiative</h1>
-    <div class="row">
-        <div class="column">
-          <a href="cap.html"><img src="media/capr.png" alt="cap" height="73"></a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <br><hr><br>
+        <h1 style="color: crimson; font-size: 2.5rem;">The AVENGERS Initiative</h1>
+
+        <div class="avengers-grid">
+            <a href="cap.html"><img src="media/capr.png"></a>
+            <a href="tony.html"><img src="media/tonr.png"></a>
+            <a href="thor.html"><img src="media/thorr.png"></a>
+            <a href="hulk.html"><img src="media/hulkr.png"></a>
+            <a href="nat.html"><img src="media/widr.png"></a>
+            <a href="hawk.html"><img src="media/hawkr.png"></a>
+            <a href="spider.html"><img src="media/spidyr.png"></a>
+            <a href="pant.html"><img src="media/pantr.png"></a>
         </div>
-        <div class="column">
-          <a href="tony.html"><img src="media/tonr.png" alt="tony" height="80"></a>
-        </div>
-        <div class="column">
-          <a href="thor.html"><img src="media/thorr.png" alt="thor" height="75"></a>
-        </div>
-        <div class="column">
-            <a href="hulk.html"><img src="media/hulkr.png" alt="thor" height="75"></a>
-        </div>
-        <div class="column">
-          <a href="nat.html"><img src="media/widr.png" alt="thor" height="75"></a>
-        </div>
-        <div class="column">
-          <a href="hawk.html"><img src="media/hawkr.png" alt="thor" height="75"></a>
-        </div>
-        <div class="column">
-          <a href="spider.html"><img src="media/spidyr.png" alt="thor" height="75"></a>
-        </div>
-        <div class="column">
-          <a href="pant.html"><img src="media/pantr.png" alt="thor" height="75"></a>
-        </div>
-      </div>
-</footer>
+    </footer>
 
 </body>
-</html> 
+</html>
